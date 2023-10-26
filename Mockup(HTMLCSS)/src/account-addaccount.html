@@ -28,10 +28,50 @@
         <h1 class="text-2xl font-bold mb-4 text-fuchsia-600">Manage Your Accounts</h1>
 
         <div class="my-4 bg-violet-950 opacity-90 container justify-center rounded-lg p-4">
-            <h2 class="text-lg text-pink-400">Add account</h2>
+            <h2 class="text-lg text-pink-400">Add Account</h2>
+            <form action="" class="flex flex-col mt-4">
+                <label for="accountName" class="text-pink-600">Account Name:</label>
+                <input type="text" id="accountName" name="accountName" placeholder="Enter account name" required class="p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:ring-pink-400 focus:opacity-100 opacity-80">
+                
+                <label for="description" class="text-pink-600 mt-4">Description:</label>
+                <textarea id="description" name="description" placeholder="Enter a description" rows="2" required class="p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:ring-pink-400 focus:opacity-100 opacity-80"></textarea>
+                
+                <label for="balance" class="text-pink-600 mt-4">Balance:</label>
+                <input type="number" id="balance" name="balance" placeholder="Enter balance" required class="p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:ring-pink-400 focus:opacity-100 opacity-80">
+                
+                <label for="dueDate" class="text-pink-600 mt-4">Due Date:</label>
+                <input type="date" id="dueDate" name="dueDate" required class="p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:ring-pink-400 focus:opacity-100 opacity-80">
+                
+                <button type="submit" class="bg-pink-400 text-white p-2 rounded-lg mt-4 hover:bg-pink-600 focus:outline-none focus:ring focus:ring-pink-400">Add Account</button>
+            </form>
         </div>
-        <div class="my-4 p-4 text-pink-400 container bg-violet-950 rounded-lg justify-center">
-            <h2 class="text-lg text-pink-400">Your accounts</h2>
+        <div class="mt-4 mb-20 p-4 text-pink-400 container bg-violet-950 rounded-lg justify-center">
+            <h2 class="text-lg text-pink-400">Your Accounts</h2>
+        
+            <!-- Account List -->
+            <ul class="text-pink-400 mt-4">
+                <li class="flex justify-between items-center mb-2">
+                    <span>Scotia Bank Credit</span>
+                    <button class="text-pink-400 hover:text-white">Edit</button>
+                </li>
+                <li class="flex justify-between items-center mb-2">
+                    <span>Scotia Bank Chequing</span>
+                    <button class="text-pink-400  hover:text-white">Edit</button>
+                </li>
+                <li class="flex justify-between items-center mb-2">
+                    <span>TD Bank Chequing</span>
+                    <button class="text-pink-400  hover:text-white">Edit</button>
+                </li>
+                <li class="flex justify-between items-center mb-2">
+                    <span>TD Bank Credit</span>
+                    <button class="text-pink-400  hover:text-white">Edit</button>
+                </li>
+                <li class="flex justify-between items-center mb-2">
+                    <span>RCB line credit</span>
+                    <button class="text-pink-400  hover:text-white">Edit</button>
+                </li>
+                <!-- Add more accounts here -->
+            </ul>
         </div>
             
 
