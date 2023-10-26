@@ -6,64 +6,65 @@
     <title>Category</title>
     <link href="../dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-b from-violet-900 to-violet-700 min-h-screen">
+<body class="bg-gradient-to-b from-violet-900 to-violet-800 min-h-screen">
     <!-- Sub-menu (top tabs) -->
-    <nav class="bg-gradient-to-b from-violet-800 to-violet-900 h-14">
+    <nav class="bg-violet-800 h-14">
         <div class="container mx-auto flex justify-evenly h-full">
             <a href="#" class="w-1/2">
                 <div class="hover:text-white text-fuchsia-400 px-4 py-2 text-center h-full">
-                    Categories
+                    Categories 
                 </div>
             </a>
             <a href="#" class="w-1/2">
                 <div class="hover:text-white text-fuchsia-400 px-4 py-2 text-center h-full">
-                    Full History
-                </div>
-            <a href="#" class="w-1/2">
-                <div class="hover:text-white text-fuchsia-400 px-4 py-2 text-center h-full">
-                    Create
+                    Create 
                 </div>
             </a>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="container mx-auto p-4">
+    <main class="container mx-auto p-4 flex flex-col justify-center">
         <h1 class="text-2xl font-bold mb-4 text-fuchsia-600">Expense History</h1>
         <p class="text-pink-500 py-2">Keep track of what you spend money on!  </p>
         <!-- <img src="clothes.png" alt="clothes"> -->
         <!--List of Categories-->
         <div>
             <ul class="space-y-5">
-                <div class="w-64 py-4 px-4 rounded-md m-5 bg-fuchsia-600">
+                <div class="w-full py-4 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
                     <li>
-                        <div class="w-8 h-8"><img src="img/clothes.png" alt="clothes"></div>
-                        <span class="ml-12">Clothing</span>
+                        <div class="w-8 h-8 absolute align-middle"><img src="img/clothes.png" alt="clothes"></div>
+                        <span class="ml-12 text-xl font-bold hover:text-white">Clothing</span>
                     </li>
                 </div>
-                <div class="w-64 py-4 px-4 rounded-md m-5 bg-fuchsia-600">
+                <div class="w-full py-4 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
                     <li>
-                        <span class="ml-12">Food</span>
+                        <div class="w-8 h-8 absolute align-middle"><img src="img/burger.png" alt="burger"></div>
+                        <span class="ml-12 text-xl font-bold hover:text-white">Food</span>
                     </li>
                 </div>
-                <div class="w-64 py-2 px-4 rounded-md m-5 bg-fuchsia-600">
+                <div class="w-full py-4 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
                     <li>
-                        <span class="ml-12">Entertainment</span>
+                        <div class="w-8 h-8 absolute align-middle"><img src="img/controller.png" alt="controller"></div>
+                        <span class="ml-12 text-xl font-bold hover:text-white">Entertainment</span>
                     </li>
                 </div>
-                <div class="w-64 py-2 px-4 rounded-md m-5 bg-fuchsia-600">
+                <div class="w-full py-4 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
                     <li>
-                        <span class="ml-12">Technologyasdw</span>
+                        <div class="w-8 h-8 absolute align-middle"><img src="img/phone.png" alt="phone"></div>
+                        <span class="ml-12 text-xl font-bold hover:text-white">Technology</span>
                     </li>
                 </div>
-                <div class="w-64 py-2 px-4 rounded-md m-5 bg-fuchsia-600">
+                <div class="w-full py-4 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
                     <li>
-                        <span class="ml-12">Hygiene</span>
+                        <div class="w-8 h-8 absolute align-middle"><img src="img/toothbrush.png" alt="brush"></div>
+                        <span class="ml-12 text-xl font-bold hover:text-white">Hygiene</span>
                     </li>
                 </div>
-                <div class="w-64 py-2 px-4 rounded-md m-5 bg-fuchsia-600">
+                <div class="w-full py-4 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-60">
                     <li>
-                        <span class="ml-12">Medical</span>
+                        <div class="w-8 h-8 absolute align-middle"><img src="img/plusbutton.png" alt="plus"></div>
+                        <span class="ml-12 text-xl font-bold hover:text-white">Add New Category</span>
                     </li>
                 </div>
             </ul>
@@ -71,31 +72,36 @@
     </main>
 
     <!-- Bottom Navigation Bar -->
-    <nav class="fixed bottom-0 left-0 w-full p-0 bg-violet-800">
+    <nav class="fixed bottom-0 left-0 w-full p-0 bg-violet-900">
         <div class="container mx-auto flex justify-between items-center h-20 p-0">
-            <a href="#" class="w-1/5">
-                <div class="hover:text-white text-fuchsia-400 h-20 flex items-center justify-center">
-                    Account 
+            <a href="account.html" class="w-1/5 flex flex-col items-center hover:text-white text-fuchsia-400">
+                <img src="img/account(white).png" alt="accounticon" class="h-10" srcset="">
+                <div class=" text-sm h-4 flex items-center justify-center">
+                    Account
                 </div>
             </a>
-            <a href="#" class="w-1/5">
-                <div class="hover:text-white text-fuchsia-400 h-20 flex items-center justify-center">
-                    Category 
+            <a href="category.html" class="w-1/5 flex flex-col items-center hover:text-white text-fuchsia-400">
+                <img src="img/category(white).png" alt="categoryicon" class="h-10" srcset="">
+                <div class= "text-sm h-4 flex items-center justify-center">
+                    Category
                 </div>
             </a>
-            <a href="#" class="w-1/5">
-                <div class="hover:text-white text-fuchsia-400 h-20 flex items-center justify-center">
-                    Dashboard 
+            <a href="index.html" class="w-1/5 flex flex-col items-center hover:text-white text-fuchsia-400">
+                <img src="img/dashboard(white).png" alt="dashboardicon" class="h-10" srcset="">
+                <div class=" text-sm h-4 flex items-center justify-center">
+                    Dashboard
                 </div>
             </a>
-            <a href="#" class="w-1/5">
-                <div class="hover:text-white text-fuchsia-400 h-20 flex items-center justify-center">
-                    Budget 
+            <a href="budgetsaving.html" class="w-1/5 flex flex-col items-center hover:text-white text-fuchsia-400">
+                <img src="img/saving(white).png" alt="budgeticono" class="h-10" srcset="">
+                <div class=" text-sm h-4 flex items-center justify-center">
+                    Budget
                 </div>
             </a>
-            <a href="#" class="w-1/5">
-                <div class="hover:text-white text-fuchsia-400 h-20 flex items-center justify-center">
-                    Settings 
+            <a href="#" class="w-1/5 flex flex-col items-center hover:text-white text-fuchsia-400">
+                <img src="img/settings(white).png" alt="settingsicon" class="h-10" srcset="">
+                <div class=" text-sm h-4 flex items-center justify-center">
+                    Settings
                 </div>
             </a>
         </div>
