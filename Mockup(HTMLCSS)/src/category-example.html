@@ -10,12 +10,12 @@
     <!-- Sub-menu (top tabs) -->
     <nav class="bg-violet-800 h-14">
         <div class="container mx-auto flex justify-evenly h-full">
-            <a href="category.html" class="w-1/2 hover:text-white text-fuchsia-400">
+            <a href="category.html" class="w-1/2 hover:text-white text-fuchsia-400 bg-violet-900">
                 <div class=" px-4 py-2 text-center h-full">
                     Categories 
                 </div>
             </a>
-            <a href="create-category.html" class="w-1/2 hover:text-white text-fuchsia-400 bg-violet-900">
+            <a href="create-category.html" class="w-1/2 hover:text-white text-fuchsia-400">
                 <div class=" px-4 py-2 text-center h-full">
                     Create 
                 </div>
@@ -25,17 +25,33 @@
 
     <!-- Main Content -->
     <main class="container mx-auto p-4 flex flex-col justify-center">
-        <h1 class="text-2xl font-bold mb-4 text-fuchsia-600">Create Category</h1>
-        <p class="text-pink-500 pb-6">Create a category to help organize your Expenses</p>
-        
+        <h1 class="text-2xl font-bold mb-4 text-fuchsia-600">Category name</h1>
+        <p class="text-pink-500 py-2">Category Description</p>
         <div>
-            <label class="text-lg mb-4 text-fuchsia-400" for="catName">Category Name</label>
-            <input class="w-full py-4 px-4 rounded-xl mb-4 opacity-90" type="text" id="catName" name="catName">
-            <br>
-            <a href="category.html">
-                <button class="object-right bg-pink-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">Save</button>
-            </a>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Things</td>
+                    <td>2023-04-10</td>
+                    <td>$2.00</td>
+                </tr>
+                <tr>
+                    <td>Stuff</td>
+                    <td>2024-05-06</td>
+                    <td>$600.00</td>
+                </tr>
+                <tr>
+                    <td>Nothing</td>
+                    <td>2068-09-29</td>
+                    <td>$40.00</td>
+                </tr>
+            </table>
         </div>
+       
     </main>
 
     <!-- Bottom Navigation Bar -->
