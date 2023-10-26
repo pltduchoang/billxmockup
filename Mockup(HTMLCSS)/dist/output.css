@@ -965,3 +965,12 @@ video {
   --tw-translate-x: calc(100% - var(--tw-translate-x));
   transform: translateX(var(--tw-translate-x));
 }
+
+.object-left {
+  --tw-translate-x: calc(0% - var(--tw-translate-x));
+  transform: translateX(var(--tw-translate-x));
+}
+
+.table-auto {
+  table-layout: auto;
+}
