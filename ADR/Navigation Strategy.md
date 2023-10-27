@@ -25,5 +25,3 @@ We considered alternative navigation strategies, including Stack, Drawer, or Top
 
 ### Summary
 The decision to implement a hybrid of Tab and Bottom Tab Navigation as the primary navigation strategy for our React Native app was made, acknowledging potential integration challenges, increased complexity, and potential performance impacts as potential negative consequences. These concerns will need to be addressed during the development process to ensure the app's success.
-
-

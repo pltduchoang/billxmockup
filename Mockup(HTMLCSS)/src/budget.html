@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category</title>
+    <title>Budget</title>
     <link href="../dist/output.css" rel="stylesheet">
 </head>
 <body class="bg-gradient-to-b from-violet-900 to-violet-800 min-h-screen">
     <!-- Sub-menu (top tabs) -->
     <nav class="bg-violet-800 h-14">
         <div class="container mx-auto flex justify-evenly h-full">
-            <a href="category.html" class="w-1/2 hover:text-white text-fuchsia-400">
+            <a href="budget.html" class="w-1/2 hover:text-white text-fuchsia-400 bg-violet-900">
                 <div class=" px-4 py-2 text-center h-full">
-                    Categories 
+                    Expenses 
                 </div>
             </a>
-            <a href="create-category.html" class="w-1/2 hover:text-white text-fuchsia-400 bg-violet-900">
+            <a href="budget-savings.html" class="w-1/2 hover:text-white text-fuchsia-400">
                 <div class=" px-4 py-2 text-center h-full">
-                    Create 
+                    Savings 
                 </div>
             </a>
         </div>
@@ -25,18 +25,45 @@
 
     <!-- Main Content -->
     <main class="container mx-auto p-4 flex flex-col justify-center">
-        <h1 class="text-2xl font-bold mb-4 text-fuchsia-600">Create Category</h1>
-        <p class="text-pink-500 pb-6">Create a category to help organize your Expenses</p>
-        
-        <div>
-            <label class="text-lg mb-4 text-fuchsia-400" for="catName">Category Name</label>
-            <input class="w-full py-4 px-4 rounded-xl mb-4 opacity-90" type="text" id="catName" name="catName">
-            <br>
-            <label class="text-lg mb-4 text-fuchsia-400" for="catDesc">Category Description</label>
-            <input class="w-full py-4 px-4 rounded-xl mb-4 opacity-90" type="text" id="catDesc" name="catDesc">
-            <a href="category.html">
-                <button class="object-right bg-pink-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">Save</button>
+        <div class="flex items-center justify-between">
+            <h1 class="text-2xl font-bold mb-4 text-fuchsia-600">Your Budget Planing</h1>
+            <a href="create-budget.html" class="flex items-center justify-between text-xl font-bold hover:text-white w-1/5 py-4 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
+                <div class="w-8 h-8"><img src="img/plusbutton.png" alt="plus"></div>
+                <span >Create Expense Plan</span>
             </a>
+        </div>
+
+        <!--List of Created Expense Plan-->
+        <div>
+            <ul class="space-y-5">
+                <div class="w-full py-0 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
+                    <li>
+                        <a href="#" class="flex items-center justify-between">
+                            <div class="w-8 h-8 absolute align-middle"><img src="img/expense.png" alt="expense"></div>
+                            <span class="ml-12 text-xl font-bold hover:text-white">Monthly Grocery Consumption</span>
+                            <img src="img/79.png" alt="progress" class="max-h-52">
+                        </a>
+                    </li>
+                </div>
+                <div class="w-full py-4 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
+                    <li>
+                        <a href="#" class="flex items-center justify-between">
+                            <div class="w-8 h-8 absolute align-middle"><img src="img/expense.png" alt="expense"></div>
+                            <span class="ml-12 text-xl font-bold hover:text-white">Seasonal Fashion Expense</span>
+                            <img src="img/26.png" alt="progress" class="max-h-52">
+                        </a>
+                    </li>
+                </div>
+                <div class="w-full py-4 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
+                    <li>
+                        <a href="#" class="flex items-center justify-between">
+                            <div class="w-8 h-8 absolute align-middle"><img src="img/expense.png" alt="expense"></div>
+                            <span class="ml-12 text-xl font-bold hover:text-white">Entertainment Cost</span>
+                            <img src="img/96.png" alt="progress" class="max-h-52">
+                        </a>
+                    </li>
+                </div>
+            </ul>
         </div>
     </main>
 

@@ -34,5 +34,3 @@ We considered alternative hardware components, such as microphone for voice inpu
 
 ### Summary
 The decision to incorporate GPS, camera, fingerprint sensor, and media file access as hardware components in our expense tracking app was made while acknowledging potential negative consequences, including battery drain, storage usage, authentication disparities, and privacy concerns. These concerns will need to be addressed during the development process to ensure a balanced user experience.
-
-

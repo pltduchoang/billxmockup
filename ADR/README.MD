@@ -5,8 +5,8 @@
 * Melody Shih
 * Ching Yin Lam (Sean)
 
-## # Architectural Decision Record (ADR)
+## Architectural Decision Record (ADR)
 * UI toolkit:
 * Navigation Strategy:
 * Hardware:
-Database Storage
+* Database Storage:

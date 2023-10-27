@@ -1,11 +1,11 @@
 # Architectural Decision Record (ADR)
 ## UI toolkit
 
-###Context
+### Context
 We are in the process of selecting a UI toolkit for our React Native mobile app.
 The UI toolkit choice will significantly impact the app's user interface design, components, and overall user experience.
 
-###Decision
+### Decision
 We have decided to develop a native app using the React Native framework.
 
 ### Rationale
