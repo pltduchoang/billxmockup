@@ -29,16 +29,16 @@
             <h2 class="text-xl mb-2 text-pink-400 ml-3">Quick Add</h2>
             <form class="flex flex-col ml-3 p-4">
                 <label for="title" class="text-pink-600 mb-1">Title:</label>
-                <input type="text" id="title" name="title" placeholder="Enter a title" required maxlength="50" class="p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:ring-pink-400 focus:opacity-100 opacity-80">
+                <input type="text" id="title" name="title" placeholder="Enter a title" required maxlength="50" class="p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:ring-pink-400 focus:opacity-100 opacity-80 mb-4">
             
                 <label for="description" class="text-pink-600 mb-1">Description:</label>
-                <textarea id="description" name="description" placeholder="Enter a description" rows="2" required maxlength="200" class="p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:ring-pink-400 focus:opacity-100 opacity-80"></textarea>
+                <textarea id="description" name="description" placeholder="Enter a description" rows="2" required maxlength="200" class="p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:ring-pink-400 focus:opacity-100 opacity-80 mb-4"></textarea>
             
                 <label for="date" class="text-pink-600 mb-1">Date:</label>
-                <input type="date" id="date" name="date" required min="2023-01-01" max="2030-12-31" value="2023-10-26" class="p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:ring-pink-400 focus:opacity-100 opacity-80">
+                <input type="date" id="date" name="date" required min="2023-01-01" max="2030-12-31" value="2023-10-26" class="p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:ring-pink-400 focus:opacity-100 opacity-80 mb-4">
             
                 <label for="category" class="text-pink-600 mb-1">Category:</label>
-                <select id="category" name="category" required class="p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:ring-pink-400 focus:opacity-100 opacity-80">
+                <select id="category" name="category" required class="p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:ring-pink-400 focus:opacity-100 opacity-80 mb-8">
                     <option value="">Select a category</option>
                     <option value="work">Groceries</option>
                     <option value="personal">Personal</option>
@@ -46,16 +46,6 @@
                     <option value="personal">Entertainment</option>
                     <option value="other">Other</option>
                 </select>
-            
-                <label class="text-pink-600 mb-1">Priority:</label>
-                <div class="flex space-x-2">
-                    <input type="radio" id="high" name="priority" value="high" class="text-pink-600 focus:opacity-100 opacity-80">
-                    <label for="high" class="text-pink-600">High</label>
-                    <input type="radio" id="medium" name="priority" value="medium" class="text-pink-600 focus:opacity-100 opacity-80">
-                    <label for="medium" class="text-pink-600">Medium</label>
-                    <input type="radio" id="low" name="priority" value="low" class="text-pink-600 focus:opacity-100 opacity-80">
-                    <label for="low" class="text-pink-600">Low</label>
-                </div>
             
                 <button type="submit" class="bg-pink-400 text-white p-2 rounded-lg hover:bg-pink-600 focus:outline-none focus:ring focus:ring-pink-400">Add</button>
             </form>
