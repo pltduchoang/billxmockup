@@ -27,48 +27,59 @@
     <main class="container mx-auto p-4 flex flex-col justify-center">
         <div class="flex items-center justify-between">
             <h1 class="text-2xl font-bold mb-4 text-fuchsia-600">Your Budget Planing</h1>
-            <a href="create-budget.html" class="flex items-center justify-between text-xl font-bold hover:text-white w-1/5 py-4 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
-                <div class="w-8 h-8"><img src="img/plusbutton.png" alt="plus"></div>
-                <span >Create Saving Plan</span>
+            <a href="create-budget.html" class="flex items-center justify-between text-xl font-bold hover:bg-blue-700 text-white w-3/5 py-4 px-4 rounded-xl mb-4 bg-pink-400 opacity-90">
+                <img src="img/plusbutton.png" alt="plus" class="w-6">Create Plan
             </a>
         </div>
 
         <!--List of Created Saving Plan-->
-        <div>
+        <div class="container rounded-xl bg-violet-950 opacity-90 relative flex flex-col justify-between mb-4 overflow-hidden p-4">
             <ul class="space-y-5">
-                <div class="w-full py-0 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
-                    <li>
-                        <div class="flex items-center justify-between">
-                            <img src="img/saving.png" alt="expense" class="w-14 h-14 absolute align-middle">
-                            <details class="relative">
-                                <summary class="p-4 w-48 ml-12 text-xl font-bold hover:text-white">My Lamborghini Plan</summary>
-                            </details>
-                            <img src="img/79.png" alt="progress" class="max-h-52">
-                        </div>
-                    </li>
-                </div>
-                <div class="w-full py-4 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
-                    <li>
-                        <div class="flex items-center justify-between">
-                            <img src="img/saving.png" alt="expense" class="w-14 h-14 absolute align-middle">
-                            <details class="relative">
-                                <summary class="p-4 w-48 ml-12 text-xl font-bold hover:text-white">Trip to Paris</summary>
-                            </details>
-                            <img src="img/26.png" alt="progress" class="max-h-52">
-                        </div>
-                    </li>
-                </div>
-                <div class="w-full py-4 px-4 rounded-xl mb-4 bg-fuchsia-600 opacity-90">
-                    <li>
-                        <div class="flex items-center justify-between">
-                            <img src="img/saving.png" alt="expense" class="w-14 h-14 absolute align-middle">
-                            <details class="relative">
-                                <summary class="p-4 w-48 ml-12 text-xl font-bold hover:text-white">Retirement</summary>
-                            </details>
-                            <img src="img/96.png" alt="progress" class="max-h-52">
-                        </div>
-                    </li>
-                </div>
+                <li class="container relative flex items-center justify-evenly py-0 rounded-xl mb-4 bg-pink-400 opacity-90">
+                    <details class="relative w-full">
+                        <summary class="flex items-center justify-between text-xl font-bold">
+                            <img src="img/saving.png" alt="expense" class="w-8">
+                            My Lamborghini Plan
+                            <img src="img/79.png" alt="progress" class="w-32">
+                        </summary>
+                        <p class="ml-12">Category: Technology</p>
+                        <p class="ml-12">Start Date: 1990-1-1</p>
+                        <p class="ml-12">End Date: 2030-12-31</p>
+                        <p class="ml-12">Used Spending: $790000</p>
+                        <p class="ml-12">Max. Spending: $1000000</p>
+                        <p class="ml-12">Note: Model "Aventador SVJ"</p>
+                    </details>
+                </li>
+                <li class="container relative flex items-center justify-evenly py-0 rounded-xl mb-4 bg-pink-400 opacity-90">
+                    <details class="relative w-full">
+                        <summary class="flex items-center justify-between text-xl font-bold">
+                            <img src="img/saving.png" alt="expense" class="w-8">
+                            Dream Trip to Paris
+                            <img src="img/26.png" alt="progress" class="w-32">
+                        </summary>
+                        <p class="ml-12">Category: Entertainment</p>
+                        <p class="ml-12">Start Date: 2023-9-1</p>
+                        <p class="ml-12">End Date: 2023-12-31</p>
+                        <p class="ml-12">Used Spending: $2080</p>
+                        <p class="ml-12">Max. Spending: $8000</p>
+                        <p class="ml-12">Note: Xmas trip</p>
+                    </details>
+                </li>
+                <li class="container relative flex items-center justify-evenly py-0 rounded-xl mb-4 bg-pink-400 opacity-90">
+                    <details class="relative w-full">
+                        <summary class="flex items-center justify-between text-xl font-bold">
+                            <img src="img/saving.png" alt="expense" class="w-8">
+                            My Retirement Plan
+                            <img src="img/96.png" alt="progress" class="w-32">
+                        </summary>
+                        <p class="ml-12">Category: Entertainment</p>
+                        <p class="ml-12">Start Date: 2020-1-1</p>
+                        <p class="ml-12">End Date: 2099-12-31</p>
+                        <p class="ml-12">Used Spending: $959999999</p>
+                        <p class="ml-12">Max. Spending: $999999999</p>
+                        <p class="ml-12">Note: </p>
+                    </details>
+                </li>
             </ul>
         </div>
     </main>
