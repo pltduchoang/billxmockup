@@ -117,9 +117,13 @@
 
 
 import React from 'react';
+import { View, Text } from 'react-native';
+import { BottomNavigation } from 'react-native-elements';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+// Import your screens/components
 import HomeMonthView from './src/screens/HomeMonthView';
 import HomeAllTime from './src/subscreens/HomeAllTime';
 import AccountOverview from './src/screens/AccountOverview';
@@ -131,8 +135,9 @@ import CategoryManage from './src/subscreens/CategoryManage';
 import SettingApp from './src/screens/SettingApp';
 
 
+const Stack = createStackNavigator();
 
-//Define the Stack Navigator for sub-tabs of Home screen
+// Define the Stack Navigators for sub-tabs of each main screen
 const HomeStack = createStackNavigator();
 function HomeStackScreen() {
   return (
@@ -143,7 +148,6 @@ function HomeStackScreen() {
   );
 }
 
-//Define the Stack Navigator for sub-tabs of Account screen
 const AccountStack = createStackNavigator();
 function AccountStackScreen() {
   return (
@@ -154,7 +158,7 @@ function AccountStackScreen() {
   );
 }
 
-//Define the Stack Navigator for sub-tabs of Category screen
+
 const CategoryStack = createStackNavigator();
 function CategoryStackScreen() {
   return (
@@ -166,7 +170,6 @@ function CategoryStackScreen() {
 }
 
 
-//Define the Stack Navigator for sub-tabs of Budget screen
 const BudgetStack = createStackNavigator();
 function BudgetStackScreen() {
   return (
@@ -177,7 +180,6 @@ function BudgetStackScreen() {
   );
 }
 
-//Define the Stack Navigator for sub-tabs of Settings screen
 const SettingsStack = createStackNavigator();
 function SettingsStackScreen() {
   return (
@@ -187,15 +189,13 @@ function SettingsStackScreen() {
   );
 }
 
-
-// Define the Tab Navigator for the main screens
+// Create a bottom tab navigator
 const Tab = createBottomTabNavigator();
-
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator tabBar={(props) => <BottomNavigation {...props} />}>
         <Tab.Screen name="Home" component={HomeStackScreen} />
         <Tab.Screen name="Account" component={AccountStackScreen} />
         <Tab.Screen name="Budget" component={BudgetStackScreen} />
