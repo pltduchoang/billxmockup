@@ -196,15 +196,24 @@ export default function App() {
             }} />
           <Tab.Screen name="Account"
           component={AccountTabScreen}
-          options={{title: "Account", headerShown: false}} />
+          options={{
+            title: "Account", 
+            headerShown: false
+            }} />
           <Tab.Screen 
           name="Budget" 
           component={BudgetTabScreen}
-          options={{title:"Budget", headerShown: false}} />
+          options={{
+            title:"Budget", 
+            headerShown: false
+            }} />
           <Tab.Screen 
           name="Setting" 
           component={SettingTabScreen}
-          options={{title:"Settings", headerShown:false}} />
+          options={{
+            title:"Settings", 
+            headerShown:false
+            }} />
         </Tab.Navigator>
       </NavigationContainer>
     </AppProvider>
