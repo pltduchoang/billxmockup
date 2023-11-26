@@ -1,9 +1,15 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, Text, TouchableOpacity } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { Icon } from 'react-native-elements';
+import { Icon } from '@rneui/themed';
+
+
+//import AppProvider and ContextHandler
+import {AppProvider} from './src/utils/AppContext';
+import {initialState, reducer} from './src/utils/ContextHandler';
+
+
 //import screens
 import HomeMonthView from './src/screens/HomeMonthView';
 import HomeAllTime from './src/screens/HomeAllTime';
@@ -22,7 +28,7 @@ function HomeTabScreen() {
   return (
     <HomeTab.Navigator
     screenOptions={{
-      tabBarActiveTintColor: "#9BBEC8",
+      tabBarActiveTintColor: "#164863",
       tabBarInactiveTintColor: "#DDF2FD",
       tabBarLabelStyle: {fontSize: 12},
       tabBarStyle: {backgroundColor: "#427D9D"},
@@ -47,7 +53,17 @@ function HomeTabScreen() {
 const CategoryTab = createMaterialTopTabNavigator();
 function CategoryTabScreen() {
   return (
-    <CategoryTab.Navigator>
+    <CategoryTab.Navigator
+    screenOptions={{
+      tabBarActiveTintColor: "#164863",
+      tabBarInactiveTintColor: "#DDF2FD",
+      tabBarLabelStyle: {fontSize: 12},
+      tabBarStyle: {backgroundColor: "#427D9D"},
+      tabBarIndicatorStyle: {
+        backgroundColor: "#164863",
+        height: 5,
+      },
+    }}>
       <CategoryTab.Screen 
       name="CategoryOverview" 
       component={CategoryOverview} 
@@ -65,7 +81,17 @@ function CategoryTabScreen() {
 const AccountTab = createMaterialTopTabNavigator();
 function AccountTabScreen() {
   return (
-    <AccountTab.Navigator>
+    <AccountTab.Navigator
+    screenOptions={{
+      tabBarActiveTintColor: "#164863",
+      tabBarInactiveTintColor: "#DDF2FD",
+      tabBarLabelStyle: {fontSize: 12},
+      tabBarStyle: {backgroundColor: "#427D9D"},
+      tabBarIndicatorStyle: {
+        backgroundColor: "#164863",
+        height: 5,
+      },
+    }}>
       <AccountTab.Screen 
       name="AccountOverView" 
       component={AccountOverView} 
@@ -83,7 +109,16 @@ function AccountTabScreen() {
 const BudgetTab = createMaterialTopTabNavigator();
 function BudgetTabScreen() {
   return (
-    <BudgetTab.Navigator>
+    <BudgetTab.Navigator
+    screenOptions={{
+      tabBarActiveTintColor: "#164863",
+      tabBarInactiveTintColor: "#DDF2FD",
+      tabBarLabelStyle: {fontSize: 12},
+      tabBarStyle: {backgroundColor: "#427D9D"},
+      tabBarIndicatorStyle: {
+        backgroundColor: "#164863",
+      }
+    }}>
       <BudgetTab.Screen 
       name="BudgetExpense" 
       component={BudgetExpense} 
@@ -101,7 +136,17 @@ function BudgetTabScreen() {
 const SettingTab = createMaterialTopTabNavigator();
 function SettingTabScreen() {
   return (
-    <SettingTab.Navigator>
+    <SettingTab.Navigator
+    screenOptions={{
+      tabBarActiveTintColor: "#164863",
+      tabBarInactiveTintColor: "#DDF2FD",
+      tabBarLabelStyle: {fontSize: 12},
+      tabBarStyle: {backgroundColor: "#427D9D"},
+      tabBarIndicatorStyle: {
+        backgroundColor: "#164863",
+        height: 5,
+      },
+    }}>
       <SettingTab.Screen 
       name="SettingApp" 
       component={SettingApp} 
@@ -121,53 +166,48 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-      screenOptions={
-        {
-          tabBarActiveTintColor: "#9BBEC8",
-          tabBarInactiveTintColor: "#DDF2FD",
-          tabBarLabelStyle: {fontSize: 12},
-          tabBarStyle: {height: 80},
-          tabBarActiveBackgroundColor: "#164863",
-          tabBarInactiveBackgroundColor: "#427D9D",
-          tabBarIconStyle: {height: 50, width: 50},
-          
-        }
-      }>
-        <Tab.Screen 
-        name="Home" 
-        component={HomeTabScreen}
-        options={{
-          title: "Dash Board", 
-          headerShown: false,
-          tabBarIcon: ({focused}) => (
-            <Icon
-            name="home"
-            type="font-awesome"
-            color={focused ? "#9BBEC8" : "#DDF2FD"}
-            size={30}
+    <AppProvider initialState={initialState} reducer={reducer}>
+      <NavigationContainer>
+        <Tab.Navigator
+        screenOptions={
+          {
+            tabBarActiveTintColor: "#9BBEC8",
+            tabBarInactiveTintColor: "#DDF2FD",
+            tabBarLabelStyle: {fontSize: 12},
+            tabBarStyle: {height: 80},
+            tabBarActiveBackgroundColor: "#164863",
+            tabBarInactiveBackgroundColor: "#427D9D",
+          }
+        }>
+          <Tab.Screen 
+          name="Home" 
+          component={HomeTabScreen}
+          options={{
+            title: "Dash Board", 
+            headerShown: false,
+          }}
             />
-          ),
-        }}
-          />
-        <Tab.Screen 
-        name="Category"
-        component={CategoryTabScreen}
-        options={{title: "Category", headerShown: false}} />
-        <Tab.Screen name="Account"
-        component={AccountTabScreen}
-        options={{title: "Account", headerShown: false}} />
-        <Tab.Screen 
-        name="Budget" 
-        component={BudgetTabScreen}
-        options={{title:"Budget", headerShown: false}} />
-        <Tab.Screen 
-        name="Setting" 
-        component={SettingTabScreen}
-        options={{title:"Settings", headerShown:false}} />
-      </Tab.Navigator>
-    </NavigationContainer>
+          <Tab.Screen 
+          name="Category"
+          component={CategoryTabScreen}
+          options={{
+            title: "Category", 
+            headerShown: false,
+            }} />
+          <Tab.Screen name="Account"
+          component={AccountTabScreen}
+          options={{title: "Account", headerShown: false}} />
+          <Tab.Screen 
+          name="Budget" 
+          component={BudgetTabScreen}
+          options={{title:"Budget", headerShown: false}} />
+          <Tab.Screen 
+          name="Setting" 
+          component={SettingTabScreen}
+          options={{title:"Settings", headerShown:false}} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </AppProvider>
   );
 }
 
