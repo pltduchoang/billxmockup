@@ -27,25 +27,19 @@ function HomeMonthView() {
   }, []);
 
 return (
-    <SafeAreaView style={{ 
-      flex: 1, 
-      backgroundColor: "#427D9D",
-      }}>
-      <ScrollView>
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text>Welcome to Home Month View!</Text>
-          {spendingData && spendingData.map((expense,index) => {
-            <Card 
-            key={index}
-            >
-              <Text>{expense.amount}</Text>
-              <Text>{expense.category}</Text>
-            </Card>
-            })
-          }
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+  <SafeAreaView style={{ flex: 1, backgroundColor: "#164863" }}>
+    <ScrollView>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{ color: "#9BBEC8" }}>Welcome to Home Month View!</Text>
+        {spendingData && spendingData.map((expense, index) => (
+          <Card key={index}>
+            <Text style={{ color: "#9BBEC8" }}>{expense.amount}</Text>
+            <Text style={{ color: "#9BBEC8" }}>{expense.category}</Text>
+          </Card>
+        ))}
+      </View>
+    </ScrollView>
+  </SafeAreaView>
   )
 }
 export default HomeMonthView;
