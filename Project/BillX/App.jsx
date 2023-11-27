@@ -169,16 +169,31 @@ export default function App() {
     <AppProvider initialState={initialState} reducer={reducer}>
       <NavigationContainer>
         <Tab.Navigator
-        screenOptions={
-          {
+        screenOptions={({route}) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName;
+            if (route.name === 'Home') {
+              iconName = 'dashboard';
+            } else if (route.name === 'Category') {
+              iconName = 'category';
+            } else if (route.name === 'Account') {
+              iconName = 'account-balance';
+            } else if (route.name === 'Budget') {
+              iconName = 'savings';
+            } else if (route.name === 'Setting') {
+              iconName = 'tune';
+            }
+      
+            return <Icon name={iconName} type="material" size={size} color={color} />;
+          },
             tabBarActiveTintColor: "#9BBEC8",
             tabBarInactiveTintColor: "#DDF2FD",
             tabBarLabelStyle: {fontSize: 12},
             tabBarStyle: {height: 80},
             tabBarActiveBackgroundColor: "#164863",
             tabBarInactiveBackgroundColor: "#427D9D",
-          }
-        }>
+          
+        })}>
           <Tab.Screen 
           name="Home" 
           component={HomeTabScreen}
