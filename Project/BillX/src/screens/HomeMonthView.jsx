@@ -53,9 +53,17 @@ const lastMonthSpending = spendingData.filter((expense) => {
 return (
   <SafeAreaView style={{ flex: 1, backgroundColor: '#164863' }}>
     <ScrollView>
+      
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text style={{ color: '#DDF2FD' }}>Welcome to Home Month View!</Text>
-        <Text style={{ color: '#DDF2FD' }}>This month's record</Text>
+        <Text style={{ 
+          color: '#DDF2FD', 
+          marginTop: 50, 
+          backgroundColor: '#9BBEC8', 
+          width: 500, 
+          textAlign: 'center',
+          lineHeight: 50,
+          }}>This month's record</Text>
         {thisMonthSpending.map((expense) => (
           <Card
             key={expense.id}
@@ -76,7 +84,14 @@ return (
             <Text style={{ color: '#DDF2FD' }}>{expense.category}</Text>
           </Card>
         ))}
-        <Text style={{ color: '#DDF2FD', marginTop: 50, backgroundColor: '#9BBEC8', width: 400, textAlign: 'center'}}>Last month's record</Text>
+        <Text style={{ 
+          color: '#DDF2FD', 
+          marginTop: 50, 
+          backgroundColor: '#9BBEC8', 
+          width: 500, 
+          textAlign: 'center',
+          lineHeight: 50,
+          }}>Last month's record</Text>
         {lastMonthSpending.map((expense) => (
           <Card
             key={expense.id}
