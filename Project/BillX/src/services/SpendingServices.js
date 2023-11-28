@@ -1,5 +1,7 @@
 
 
+
+
 // Service to get spending data from JSON file
 export const getSpendingData = async () => {
   try {
